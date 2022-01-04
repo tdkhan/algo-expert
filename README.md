@@ -1,5 +1,5 @@
-# AlgorExpert (Ace the Coding Interview)
-This repository contains my soulutions to the coding problems on [AlgoExpert](https://www.algoexpert.io).
+# AlgoExpert (Ace the Coding Interview)
+This repository contains my solutions to the coding problems on [AlgoExpert](https://www.algoexpert.io).
 
 ## Difficulty Levels
 
