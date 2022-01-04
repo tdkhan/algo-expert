@@ -30,7 +30,7 @@ using namespace std;
 
 string tournamentWinner(vector<vector<string>> competitions, vector<int> results) {
 
-	// Soution 1: brute force - O() time | O() space
+	// Soution 1: O(n) time | O(k) space
 	int maxScore = 0;
 	string Winner = " ";
 	unordered_map<string, int> score;
