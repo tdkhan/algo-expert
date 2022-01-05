@@ -16,10 +16,12 @@ g++ -o output <filename.cpp>
 
 ## Questions
 
-| Question                           | Difficulty | Category             | 
-| ---------------------------------- | ---------- | -------------------- | 
-| Two Number Sum                     | 🟢         | Arrays               | 
-| Validate Subsequence               | 🟢         | Arrays               | 
-| Sorted Squared Array               | 🟢         | Arrays               | 
-| Tournament Winner                  | 🟢         | Arrays               |
-| Remove Duplicates from Linked List | 🟢         | Linked Lists         |
+| Question                                                                                                                      | Difficulty | Category             | 
+| ----------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------- | 
+| (Two Number Sum)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/TwoNumberSum.cpp]                                     | 🟢         | Arrays               | 
+| (Validate Subsequence)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/ValidateSubsequence.cpp]                        | 🟢         | Arrays               | 
+| (Sorted Squared Array)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/SortedSquaredError.cpp]                         | 🟢         | Arrays               | 
+| (Tournament Winner)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/TournamentWinner.cpp]                              | 🟢         | Arrays               |
+| Non-Constructible Change                                                                                                      | 🟢         | Arrays               |
+| Three Number Sum                                                                                                              | 🔵         | Arrays               |
+| (Remove Duplicates from Linked List)[https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp]        | 🟢         | Linked Lists         |
