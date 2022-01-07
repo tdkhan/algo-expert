@@ -18,10 +18,12 @@ g++ -o output <filename.cpp>
 
 | Question                                                                                                                      | Difficulty | Category             | 
 | ----------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------- | 
-| (Two Number Sum)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/TwoNumberSum.cpp]                                     | 🟢         | Arrays               | 
-| (Validate Subsequence)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/ValidateSubsequence.cpp]                        | 🟢         | Arrays               | 
-| (Sorted Squared Array)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/SortedSquaredError.cpp]                         | 🟢         | Arrays               | 
-| (Tournament Winner)[https://github.com/tdkhan/algo-expert/blob/main/Arrays/TournamentWinner.cpp]                              | 🟢         | Arrays               |
-| Non-Constructible Change                                                                                                      | 🟢         | Arrays               |
-| Three Number Sum                                                                                                              | 🔵         | Arrays               |
-| (Remove Duplicates from Linked List)[https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp]        | 🟢         | Linked Lists         |
+| [Two Number Sum](https://github.com/tdkhan/algo-expert/blob/main/Arrays/TwoNumberSum.cpp)                                     | 🟢         | Arrays               | 
+| [Validate Subsequence](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ValidateSubsequence.cpp)                        | 🟢         | Arrays               | 
+| [Sorted Squared Array](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SortedSquaredError.cpp)                         | 🟢         | Arrays               | 
+| [Tournament Winner](https://github.com/tdkhan/algo-expert/blob/main/Arrays/TournamentWinner.cpp)                              | 🟢         | Arrays               |
+| [Non-Constructible Change](https://github.com/tdkhan/algo-expert/blob/main/Arrays/Non-ConstructibleChange.cpp)                | 🟢         | Arrays               |
+| [Three Number Sum](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ThreeNumberSum.cpp)                                 | 🔵         | Arrays               |
+| Smallest Difference                                                                                                           | 🔵         | Arrays               |
+| [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
+| Linked List Construction                                                                                                      | 🔵         | Linked Lists         |
