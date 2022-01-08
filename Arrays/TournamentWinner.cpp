@@ -86,4 +86,6 @@ int main() {
 	// Expected Output: Python
 	ans = tournamentWinner(competitions, results);
 	cout << "Winner: " << ans << endl;
+
+	return 0;
 }

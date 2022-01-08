@@ -30,12 +30,11 @@ public:
 
 LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTwo) {
   	
-  	// Solution 1: O(n) time | O(k) space 
+  // Solution 1: O(n) time | O(k) space 
 	int value1, value2, carry, sum, count;
 	count = 0;
 	carry = 0;
 	LinkedList *prev, *ans;
-
 	LinkedList *currentOne = linkedListOne;
 	LinkedList *currentTwo = linkedListTwo;
 	
@@ -44,12 +43,10 @@ LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTw
 		
 		value1 = currentOne != nullptr ? currentOne -> value : 0;
 		currentOne = currentOne != nullptr ? currentOne -> next : nullptr;
-		
 		value2 = currentTwo != nullptr ? currentTwo -> value : 0;
 		currentTwo = currentTwo != nullptr ? currentTwo -> next : nullptr;
 		
 		sum = value1 + value2 + carry;
-		
 		carry = sum / 10;
 		sum = sum % 10;
 		
@@ -63,7 +60,6 @@ LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTw
 			prev = prev -> next;
 		}
 	}
-	
   return ans;
 }
 
@@ -110,4 +106,6 @@ int main() {
 	ans = sumOfLinkedLists(list1, list2);
 	cout << endl << "LinkedList Sum: " << endl;
 	printLinkedList(ans);
+
+	return 0;
 }

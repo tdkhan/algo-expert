@@ -76,4 +76,6 @@ int main() {
 	LinkedList *ans;
 	ans = removeDuplicatesFromLinkedList(&one);
 	printLinkedList(ans);
+
+	return 0;
 }

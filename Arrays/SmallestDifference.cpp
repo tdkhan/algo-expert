@@ -83,4 +83,6 @@ int main() {
 	// expected output: [28, 26]
 	ans = smallestDifference(arrayOne, arrayTwo);
 	cout << "[" << ans[0] << ", " << ans[1] << "]" << endl;
+
+	return 0;
 }

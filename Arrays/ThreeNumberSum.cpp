@@ -100,4 +100,6 @@ int main() {
 		cout << "[" << ans[i][0] << ", " << ans[i][1] << ", " << ans[i][2] << "] " ;
 	}
 	cout << "]" << endl;
+
+	return 0;
 }

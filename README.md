@@ -1,7 +1,7 @@
 # AlgoExpert (Ace the Coding Interview)
 This repository contains my solutions to the coding problems on [AlgoExpert](https://www.algoexpert.io).
 
-The solutions are coded in C++ and compiled using the g++ compiler in Ubuntu. Each file has a problem description inserted as a comment. Each file also contains a sample test case, to test the code run the following commands in the terminal form the correct working directory
+The solutions are coded in C++ and compiled using the g++ compiler in Ubuntu. Each file has a problem description inserted as a comment. Each file also contains a sample test case, to test the code run the following commands in the terminal from the correct working directory
 ```
 g++ -o output <filename.cpp>
 ./output
@@ -25,7 +25,10 @@ g++ -o output <filename.cpp>
 | [Non-Constructible Change](https://github.com/tdkhan/algo-expert/blob/main/Arrays/Non-ConstructibleChange.cpp)                | 🟢         | Arrays               |
 | [Three Number Sum](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ThreeNumberSum.cpp)                                 | 🔵         | Arrays               |
 | [Smallest Difference](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SmallestDifference.cpp)                          | 🔵         | Arrays               |
+| [Move Element To End](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MoveElementToEnd.cpp)                            | 🔵         | Arrays               |
+| [Monotonic Array](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MonotonicArray.cpp)                                  | 🔵         | Arrays               |
 | [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
 | [Linked List Construction](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/LinkedListConstruction.cpp)            | 🔵         | Linked Lists         |
-| Remove Kth Node From End                                                                                                      | 🔵         | Linked Lists         |
-| Sum of Linked Lists                                                                                                           | 🔵         | Linked Lists         |
+| [Remove Kth Node From End](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveKthNodefromtheEnd.cpp)           | 🔵         | Linked Lists         |
+| [Sum of Linked Lists](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/SumofLinkedLists.cpp)                       | 🔵         | Linked Lists         |
+| [Find Loop](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/FindLoop.cpp)                                         | 🔴         | Linked Lists         |
