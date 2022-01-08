@@ -24,6 +24,8 @@ g++ -o output <filename.cpp>
 | [Tournament Winner](https://github.com/tdkhan/algo-expert/blob/main/Arrays/TournamentWinner.cpp)                              | 🟢         | Arrays               |
 | [Non-Constructible Change](https://github.com/tdkhan/algo-expert/blob/main/Arrays/Non-ConstructibleChange.cpp)                | 🟢         | Arrays               |
 | [Three Number Sum](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ThreeNumberSum.cpp)                                 | 🔵         | Arrays               |
-| Smallest Difference                                                                                                           | 🔵         | Arrays               |
+| [Smallest Difference](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SmallestDifference.cpp)                          | 🔵         | Arrays               |
 | [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
-| Linked List Construction                                                                                                      | 🔵         | Linked Lists         |
+| [Linked List Construction](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/LinkedListConstruction.cpp)            | 🔵         | Linked Lists         |
+| Remove Kth Node From End                                                                                                      | 🔵         | Linked Lists         |
+| Sum of Linked Lists                                                                                                           | 🔵         | Linked Lists         |
