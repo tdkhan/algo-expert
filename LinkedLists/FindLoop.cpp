@@ -70,8 +70,8 @@ LinkedList *findLoop(LinkedList *head) {
 int main() {
 
 	// LinkedList: 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6
-	//								   ^		 |
-	//								   |         V
+	//                                 ^         |
+	//                                 |         V
 	//                                 9 <- 8 <- 7
 
 	LinkedList list(0);
@@ -92,4 +92,6 @@ int main() {
 		current = current -> next;
 	}
 	cout << "repeat" << endl;
+
+	return 0;
 }

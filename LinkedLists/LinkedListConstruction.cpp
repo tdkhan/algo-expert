@@ -61,26 +61,26 @@ public:
     
     // O(1) time | O(1) space
     if (head == nullptr)
-	{
-		head = node;
-		tail = node;
-	}
+  	{
+    	head = node;
+    	tail = node;
+  	}
 		
-	if (node != head)
-		insertBefore(head, node);
+  	if (node != head)
+  		insertBefore(head, node);
   }
 
   void setTail(Node *node) {
 
     // O(1) time | O(1) space
     if (tail == nullptr)
-	{
-		head = node;
-		tail = node;
-	}
+    {
+    	head = node;
+    	tail = node;
+    }
 
-	if (tail != node)
-		insertAfter(tail, node);
+		if (tail != node)
+			insertAfter(tail, node);
   }
 
   void insertBefore(Node *node, Node *nodeToInsert) {
@@ -89,7 +89,7 @@ public:
     if (nodeToInsert == head && nodeToInsert == tail)
     	return;
 		
-	remove(nodeToInsert);
+		remove(nodeToInsert);
 
     Node *temp;
     temp = node -> prev;
@@ -101,8 +101,8 @@ public:
     
     if(node == head)
     	head = nodeToInsert; 
-	else
-		temp -> next = nodeToInsert;
+		else
+			temp -> next = nodeToInsert;
 	}
 
   void insertAfter(Node *node, Node *nodeToInsert) {
@@ -111,7 +111,7 @@ public:
     if (nodeToInsert == head && nodeToInsert == tail)
     	return;
 		
-	remove(nodeToInsert);
+		remove(nodeToInsert);
     Node *temp;
     temp = node -> next;
 
@@ -122,86 +122,87 @@ public:
 
     if(node == tail)
     	tail = nodeToInsert; 
-	else
-		temp -> prev = nodeToInsert;
+    else
+    	temp -> prev = nodeToInsert;
   }
 
   void insertAtPosition(int position, Node *nodeToInsert) {
    
-   // O(p) time | O(1) space
-   if (position == 1)
-   {
-		setHead(nodeToInsert);
-		return;
-	}
-	int count = 2;
-	Node *current = head->next;
+   	// O(p) time | O(1) space
+  	if (position == 1)
+  	{
+  		setHead(nodeToInsert);
+  		return;
+  	}
 
-	while (current != nullptr)
-	{
-		if (count == position)
+  	int count = 2;
+  	Node *current = head->next;
+
+		while (current != nullptr)
 		{
-			insertBefore(current, nodeToInsert);
-			break;
+			if (count == position)
+			{
+				insertBefore(current, nodeToInsert);
+				break;
+			}
+			count++;
+			current = current -> next;
 		}
-		count++;
-		current = current -> next;
-	}
 
-	if (current == nullptr)
-		setTail(nodeToInsert);
+		if (current == nullptr)
+			setTail(nodeToInsert);
   }
 
   void removeNodesWithValue(int value) {
     
     // O(n) time | O(1) space
-	Node *current = head;
-	Node *temp;
+		Node *current = head;
+		Node *temp;
 	
-	while(current != nullptr)
-	{
-		if (current -> value == value)
+		while(current != nullptr)
 		{
-			temp = current -> next;
-			remove(current);
-			current = temp;
+			if (current -> value == value)
+			{
+				temp = current -> next;
+				remove(current);
+				current = temp;
+			}
+			else
+				current = current -> next;
 		}
-		else
-			current = current -> next;
-	}
   }
 
   void remove(Node *node) {
     
     // O(1) time | O(1) space
-	if (node == tail)
-		tail = node -> prev;
+		if (node == tail)
+			tail = node -> prev;
 
-	if (node == head)
-		head = node -> next;
+		if (node == head)
+			head = node -> next;
 	
-	if (node->next != nullptr)
-		node -> next -> prev = node -> prev;
+		if (node->next != nullptr)
+			node -> next -> prev = node -> prev;
 	
-	if (node->prev != nullptr)
-		node -> prev -> next = node -> next;
+		if (node->prev != nullptr)
+			node -> prev -> next = node -> next;
 
-	node -> prev = nullptr;
-	node -> next = nullptr;
+		node -> prev = nullptr;
+		node -> next = nullptr;
   }
 
   bool containsNodeWithValue(int value) {
     
     // O(n) time | O(1) space
-	Node *current = head;
+		Node *current = head;
 	
-	while (current != nullptr)
-	{
-		if (current -> value == value)
-			return true;
+		while (current != nullptr)
+		{
+			if (current -> value == value)
+				return true;
 		
-		current = current -> next;
-	}
+			current = current -> next;
+		}
 
     return false;
   }

@@ -29,8 +29,8 @@ public:
 };
 
 LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTwo) {
-  	
-  // Solution 1: O(n) time | O(k) space 
+
+	// Solution 1: O(n) time | O(k) space 
 	int value1, value2, carry, sum, count;
 	count = 0;
 	carry = 0;
