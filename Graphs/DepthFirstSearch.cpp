@@ -59,11 +59,11 @@ int main() {
 
 	/*      A
 	      / | \
-         B  C  D
-		/ \   / \  
-	   E   F G 	 H
-		  / \ \
-		 I   J k
+             B  C  D
+            / \   / \  
+	   E   F G   H
+	      / \ \
+	     I   J k
 	*/
 
 	Node graph("A");
