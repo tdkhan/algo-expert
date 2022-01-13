@@ -34,3 +34,5 @@ g++ -o output <filename.cpp>
 | [Find Loop](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/FindLoop.cpp)                                         | 🔴         | Linked Lists         |
 | [Depth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/DepthFirstSearch.cpp)                             | 🟢         | Graphs               |
 | [Single Cycle Check](https://github.com/tdkhan/algo-expert/blob/main/Graphs/SingleCycleCheck.cpp)                             | 🔵         | Graphs               |
+| [Breadth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/BreadthFirstSearch.cpp)                         | 🔵         | Graphs               |
+| [River Sizes](https://github.com/tdkhan/algo-expert/blob/main/Graphs/RiverSizes.cpp)                                          | 🔵         | Graphs               |
