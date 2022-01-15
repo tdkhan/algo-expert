@@ -2,7 +2,7 @@
 
 You're given a two-dimensional array (a matrix) of potentially unequal height and width containing only
 0s and 1s. Each 0 represents land, and each 1 represents part of a river. A river consists of any number
-of 1s that are either horizontelly or vertically adjacent (but not diagnolly adjacent). The number of
+of 1s that are either horizontally or vertically adjacent (but not diagnolly adjacent). The number of
 adjacent 1s forming a river determine its size.
 
 Note that a river can twist. In other words, it doesn't have to be straight vertical line or a 
@@ -21,12 +21,11 @@ sizes don't need to be in any particular order.
 
 using namespace std;
 
-int depthFirstSearch (vector<vector<int>> *matrix, set<pair<int, int>> *visited, pair<int, int> array);
+int depthFirstSearch (vector<vector<int>> *matrix, set<pair<int, int>> *visited, pair<int, int> index);
 vector<pair<int, int>> getNeighbors (pair<int, int> current, int cols, int rows);
 
 vector<int> riverSizes(vector<vector<int>> matrix) {
-  	
-  	// Solution 1: O() time | O() space
+  	// Solution 1: O(w*h) time | O(w*h) space
 	set<pair<int, int>> visited;
 	vector <int> rivers;
 	for (int i = 0; i < matrix.size(); i++){
@@ -45,10 +44,10 @@ vector<int> riverSizes(vector<vector<int>> matrix) {
   	return rivers;
 }
 
-int depthFirstSearch (vector<vector<int>> *matrix, set<pair<int, int>> *visited, pair<int, int> array) {
+int depthFirstSearch (vector<vector<int>> *matrix, set<pair<int, int>> *visited, pair<int, int> index) {
 	vector<pair<int, int>> neighbors;
 	int size = 0;
-	vector<pair<int, int>> stack{array};
+	vector<pair<int, int>> stack{index};
 	pair<int, int> current;
 	while (!stack.empty()) {
 		current = stack[stack.size()-1];
@@ -60,11 +59,10 @@ int depthFirstSearch (vector<vector<int>> *matrix, set<pair<int, int>> *visited,
 		for (int i = 0; i < neighbors.size(); i++) {
 			int k = neighbors[i].first;
 			int j = neighbors[i].second;
-			if ((*matrix)[k][j] == 1) {
-				if (visited->find(neighbors[i]) == visited->end()){
-					visited->insert(neighbors[i]);
+			if (visited->find(neighbors[i]) == visited->end()) {
+				visited->insert(neighbors[i]);
+				if ((*matrix)[k][j] == 1) 
 					stack.push_back(neighbors[i]);
-				}
 			}
 		}
 	}
