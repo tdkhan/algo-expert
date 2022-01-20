@@ -24,7 +24,7 @@ public:
 
   	vector<string> breadthFirstSearch(vector<string> *array) {
     	
-    	// Solution 1: O(n+e) time | O(n) space
+		// Solution 1: O(n+e) time | O(n) space
 		Node *current = this;
 		queue<Node *> visited;
 		visited.push(current);
@@ -36,13 +36,13 @@ public:
 			}
 			current = visited.front();
 		}
-    	return *array;
+		return *array;
   	}
 
   	Node *addChild(string name) {
-	    Node *child = new Node(name);
-	    children.push_back(child);
-	    return this;
+		Node *child = new Node(name);
+		children.push_back(child);
+		return this;
   	}
 };
 

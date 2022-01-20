@@ -17,25 +17,25 @@ using namespace std;
 
 class LinkedList {
 public:
-  int value;
-  LinkedList *next = nullptr;
+	int value;
+	LinkedList *next = nullptr;
 
-  LinkedList(int value) { this->value = value; }
+	LinkedList(int value) { this->value = value; }
 };
 
 LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList) {
   
-  // Soution 1: O(n) time | O(1) space 
+	// Soution 1: O(n) time | O(1) space 
 	LinkedList *currentNode = linkedList;
-	
+
 	while (currentNode != nullptr){
 		while(currentNode->next != nullptr && currentNode->value == currentNode->next->value){
 			currentNode->next = currentNode->next->next;
 		}
 		currentNode = currentNode->next;
 	}
-	
-  return linkedList;
+
+	return linkedList;
 }
 
 void printLinkedList(LinkedList *list){

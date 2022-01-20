@@ -27,28 +27,28 @@ using namespace std;
 
 class LinkedList {
 public:
-  int value;
-  LinkedList *next;
+	int value;
+	LinkedList *next;
 
-  LinkedList(int value);
-  void addMany(vector<int> values);
-  void printLinkedList();
+	LinkedList(int value);
+	void addMany(vector<int> values);
+	void printLinkedList();
 };
 
 LinkedList::LinkedList(int value) {
-  this->value = value;
-  this->next = nullptr;
+	this->value = value;
+	this->next = nullptr;
 }
 
 void LinkedList::addMany(vector<int> values) {
-  LinkedList *current = this;
-  while (current->next != nullptr) {
-    current = current->next;
-  }
-  for (int value : values) {
-    current->next = new LinkedList(value);
-    current = current->next;
-  }
+	LinkedList *current = this;
+	while (current->next != nullptr) {
+	  current = current->next;
+	}
+	for (int value : values) {
+	  current->next = new LinkedList(value);
+	  current = current->next;
+	}
 }
 
 void LinkedList::printLinkedList() {

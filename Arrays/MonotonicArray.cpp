@@ -84,4 +84,6 @@ int main() {
 	// expected output: 1
 	ans = isMonotonic(array);
 	cout << ans << endl;
+
+	return 0;
 }

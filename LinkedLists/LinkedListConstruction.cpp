@@ -32,187 +32,184 @@ using namespace std;
 
 class Node {
 public:
-  int value;
-  Node *prev;
-  Node *next;
+	int value;
+	Node *prev;
+	Node *next;
 
-  Node(int value);
+	Node(int value);
 };
 
 Node::Node(int value) {
-  this->value = value;
-  prev = nullptr;
-  next = nullptr;
+	this->value = value;
+	prev = nullptr;
+	next = nullptr;
 };
 
 class DoublyLinkedList {
 public:
-  Node *head;
-  Node *tail;
+	Node *head;
+	Node *tail;
 
-  DoublyLinkedList() {
-    head = nullptr;
-    tail = nullptr;
-  }
+	DoublyLinkedList() {
+	  head = nullptr;
+	  tail = nullptr;
+	}
 
-  // Solution: each method has its own time and space complexity as indicated in the comments
-  
-  void setHead(Node *node) {
-    
-    // O(1) time | O(1) space
-    if (head == nullptr)
-    {
+	// Solution: each method has its own time and space complexity as indicated in the comments
+
+	void setHead(Node *node) {
+	  
+	  // O(1) time | O(1) space
+	  if (head == nullptr)
+	  {
 	    head = node;
 	    tail = node;
-    }
+	  }
 	  
-    if (node != head)
+	  if (node != head)
 	    insertBefore(head, node);
-  }
-
-  void setTail(Node *node) {
-
-    // O(1) time | O(1) space
-    if (tail == nullptr)
-    {
-    	head = node;
-    	tail = node;
-    }
-    
-    if (tail != node)
-	insertAfter(tail, node);
-  }
-
-  void insertBefore(Node *node, Node *nodeToInsert) {
-    
-    // O(1) time | O(1) space
-    if (nodeToInsert == head && nodeToInsert == tail)
-    	return;
-	remove(nodeToInsert);
-
-    Node *temp;
-    temp = node -> prev;
-
-    nodeToInsert -> next = node;
-    nodeToInsert -> prev = node -> prev;
-
-    node -> prev = nodeToInsert;
-    
-    if(node == head)
-    	head = nodeToInsert; 
-    else
-	temp -> next = nodeToInsert;
-  }
-
-  void insertAfter(Node *node, Node *nodeToInsert) {
-    
-    // O(1) time | O(1) space
-    if (nodeToInsert == head && nodeToInsert == tail)
-    	return;
-		
-    remove(nodeToInsert);
-    Node *temp;
-    temp = node -> next;
-
-    nodeToInsert -> next = node -> next;
-    nodeToInsert -> prev = node;
-
-    node -> next = nodeToInsert;
-
-    if(node == tail)
-    	tail = nodeToInsert; 
-    else
-    	temp -> prev = nodeToInsert;
-  }
-
-  void insertAtPosition(int position, Node *nodeToInsert) {
-   
-   	// O(p) time | O(1) space
-  	if (position == 1)
-  	{
-  		setHead(nodeToInsert);
-  		return;
-  	}
-
-  	int count = 2;
-  	Node *current = head->next;
-
-	while (current != nullptr)
-	{
-		if (count == position)
-		{
-			insertBefore(current, nodeToInsert);
-			break;
-		}
-		count++;
-		current = current -> next;
 	}
 
-	if (current == nullptr)
-		setTail(nodeToInsert);
-  }
+	void setTail(Node *node) {
 
-  void removeNodesWithValue(int value) {
-    
-    	// O(n) time | O(1) space
-	Node *current = head;
-	Node *temp;
-	
-	while(current != nullptr)
-	{
-		if (current -> value == value)
+	  // O(1) time | O(1) space
+	  if (tail == nullptr)
+	  {
+	  	head = node;
+	  	tail = node;
+	  }
+	  
+	  if (tail != node)
+			insertAfter(tail, node);
+	}
+
+	void insertBefore(Node *node, Node *nodeToInsert) {
+	  
+	  // O(1) time | O(1) space
+	  if (nodeToInsert == head && nodeToInsert == tail)
+	  	return;
+		remove(nodeToInsert);
+
+	  Node *temp;
+	  temp = node -> prev;
+
+	  nodeToInsert -> next = node;
+	  nodeToInsert -> prev = node -> prev;
+
+	  node -> prev = nodeToInsert;
+	  
+	  if(node == head)
+	  	head = nodeToInsert; 
+	  else
+			temp -> next = nodeToInsert;
+	}
+
+	void insertAfter(Node *node, Node *nodeToInsert) {
+	  
+	  // O(1) time | O(1) space
+	  if (nodeToInsert == head && nodeToInsert == tail)
+	  	return;
+		
+	  remove(nodeToInsert);
+	  Node *temp;
+	  temp = node -> next;
+
+	  nodeToInsert -> next = node -> next;
+	  nodeToInsert -> prev = node;
+
+	  node -> next = nodeToInsert;
+
+	  if(node == tail)
+	  	tail = nodeToInsert; 
+	  else
+	  	temp -> prev = nodeToInsert;
+	}
+
+	void insertAtPosition(int position, Node *nodeToInsert) {
+	 
+	 	// O(p) time | O(1) space
+		if (position == 1)
 		{
-			temp = current -> next;
-			remove(current);
-			current = temp;
+			setHead(nodeToInsert);
+			return;
 		}
-		else
+
+		int count = 2;
+		Node *current = head->next;
+
+		while (current != nullptr)
+		{
+			if (count == position)
+			{
+				insertBefore(current, nodeToInsert);
+				break;
+			}
+			count++;
 			current = current -> next;
+		}
+
+		if (current == nullptr)
+			setTail(nodeToInsert);
 	}
-  }
 
-  void remove(Node *node) {
-    
-    	// O(1) time | O(1) space
-	if (node == tail)
-		tail = node -> prev;
+	void removeNodesWithValue(int value) {
+	  
+	  // O(n) time | O(1) space
+		Node *current = head;
+		Node *temp;
 
-	if (node == head)
-		head = node -> next;
-	
-	if (node->next != nullptr)
-		node -> next -> prev = node -> prev;
-	
-	if (node->prev != nullptr)
-		node -> prev -> next = node -> next;
-
-	node -> prev = nullptr;
-	node -> next = nullptr;
-  }
-
-  bool containsNodeWithValue(int value) {
-    
-    // O(n) time | O(1) space
-	Node *current = head;
-	
-	while (current != nullptr)
-	{
-		if (current -> value == value)
-			return true;
-		
-		current = current -> next;
+		while(current != nullptr)
+		{
+			if (current -> value == value)
+			{
+				temp = current -> next;
+				remove(current);
+				current = temp;
+			}
+			else
+				current = current -> next;
+		}
 	}
-	return false;
-  }
+
+	void remove(Node *node) {
+	  
+	  // O(1) time | O(1) space
+		if (node == tail)
+			tail = node -> prev;
+
+		if (node == head)
+			head = node -> next;
+
+		if (node->next != nullptr)
+			node -> next -> prev = node -> prev;
+
+		if (node->prev != nullptr)
+			node -> prev -> next = node -> next;
+
+		node -> prev = nullptr;
+		node -> next = nullptr;
+	}
+
+	bool containsNodeWithValue(int value) {
+	  
+	  // O(n) time | O(1) space
+		Node *current = head;
+
+		while (current != nullptr)
+		{
+			if (current -> value == value)
+				return true;
+			
+			current = current -> next;
+		}
+		return false;
+		}
 };
 
 void printLinkedList(Node *node){
-
 	Node *currentNode = node;
-
 	cout << "NUll <-> ";
 	while (currentNode != nullptr){
-
 		cout << currentNode->value << " <-> ";
 		currentNode = currentNode->next;
 	}
@@ -225,7 +222,7 @@ int main() {
 	Node saone(3);
 	Node satwo(3);
 	Node sathree(6);
-	
+
 	// Linked List 1 <-> 2 <-> 3 <-> 4 <-> 5
 	Node one(1);
 	Node two(2);
@@ -268,7 +265,7 @@ int main() {
 	alpha.insertAfter(&sathree, &saone);
 	cout << "insert After method call: " << endl;
 	printLinkedList(alpha.head);	
-	
+
 	// expected output: 3 <-> 4 <-> 1 <-> 2 <-> 5 <-> 3 <-> 6 <-> 3
 	alpha.insertAtPosition(1, &satwo);
 	cout << "insert At Position method call: " << endl;

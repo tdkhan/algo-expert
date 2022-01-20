@@ -22,10 +22,10 @@ using namespace std;
 
 class LinkedList {
 public:
-  int value;
-  LinkedList *next = nullptr;
+	int value;
+	LinkedList *next = nullptr;
 
-  LinkedList(int value) { this->value = value; }
+	LinkedList(int value) { this->value = value; }
 };
 
 LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTwo) {
@@ -64,14 +64,14 @@ LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTw
 }
 
 void addMany(LinkedList *list, vector<int> values) {
-  LinkedList *current = list;
-  while (current->next != nullptr) {
-    current = current->next;
-  }
-  for (int value : values) {
-    current->next = new LinkedList(value);
-    current = current->next;
-  }
+	LinkedList *current = list;
+	while (current->next != nullptr) {
+	  current = current->next;
+	}
+	for (int value : values) {
+	  current->next = new LinkedList(value);
+	  current = current->next;
+	}
 }
 
 void printLinkedList(LinkedList *list) {

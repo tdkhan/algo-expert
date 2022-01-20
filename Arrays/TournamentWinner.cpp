@@ -74,7 +74,7 @@ string tournamentWinner(vector<vector<string>> competitions, vector<int> results
 		}
 	}
 	
-  return Winner;
+  	return Winner;
 }
 
 int main() {

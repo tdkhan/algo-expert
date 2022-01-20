@@ -24,7 +24,7 @@ public:
   	vector<string> depthFirstSearch(vector<string> *array) {
     	
   		
-    	// Solution 1: iterative - O(e+n) time | O(n) space
+		// Solution 1: iterative - O(e+n) time | O(n) space
 		vector<Node *> stack;
 		Node *current = this;
 		stack.push_back(current);
@@ -38,8 +38,8 @@ public:
 			current = stack[stack.size()-1];
 		}
 		return *array;
-		
-  		/*
+			
+		/*
 		// Solution 2: recursive O(e+n) time | O(n) space
 		array->push_back(this->name);
 		for (int i = 0; i < this->children.size(); i++)
@@ -59,11 +59,12 @@ int main() {
 
 	/*      A
 	      / | \
-             B  C  D
-            / \   / \  
+         B  C  D
+        / \   / \  
 	   E   F G   H
-	      / \ \
-	     I   J k
+	  / \   \
+	 I   J   k
+
 	*/
 
 	Node graph("A");
