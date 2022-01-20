@@ -51,8 +51,8 @@ public:
 	Node *tail;
 
 	DoublyLinkedList() {
-	  head = nullptr;
-	  tail = nullptr;
+		head = nullptr;
+		tail = nullptr;
 	}
 
 	// Solution: each method has its own time and space complexity as indicated in the comments
@@ -60,69 +60,69 @@ public:
 	void setHead(Node *node) {
 	  
 	  // O(1) time | O(1) space
-	  if (head == nullptr)
-	  {
-	    head = node;
-	    tail = node;
-	  }
+		if (head == nullptr)
+		{
+			head = node;
+			tail = node;
+		}
 	  
-	  if (node != head)
-	    insertBefore(head, node);
+		if (node != head)
+			insertBefore(head, node);
 	}
 
 	void setTail(Node *node) {
 
-	  // O(1) time | O(1) space
-	  if (tail == nullptr)
-	  {
-	  	head = node;
-	  	tail = node;
-	  }
-	  
-	  if (tail != node)
+		// O(1) time | O(1) space
+		if (tail == nullptr)
+		{
+			head = node;
+			tail = node;
+		}
+
+		if (tail != node)
 			insertAfter(tail, node);
 	}
 
 	void insertBefore(Node *node, Node *nodeToInsert) {
 	  
-	  // O(1) time | O(1) space
-	  if (nodeToInsert == head && nodeToInsert == tail)
-	  	return;
+		// O(1) time | O(1) space
+		if (nodeToInsert == head && nodeToInsert == tail)
+			return;
 		remove(nodeToInsert);
 
-	  Node *temp;
-	  temp = node -> prev;
+		Node *temp;
+		temp = node -> prev;
 
-	  nodeToInsert -> next = node;
-	  nodeToInsert -> prev = node -> prev;
+		nodeToInsert -> next = node;
+		nodeToInsert -> prev = node -> prev;
 
-	  node -> prev = nodeToInsert;
+		node -> prev = nodeToInsert;
 	  
-	  if(node == head)
-	  	head = nodeToInsert; 
-	  else
+		if(node == head)
+			head = nodeToInsert; 
+		else
 			temp -> next = nodeToInsert;
 	}
 
 	void insertAfter(Node *node, Node *nodeToInsert) {
 	  
-	  // O(1) time | O(1) space
-	  if (nodeToInsert == head && nodeToInsert == tail)
-	  	return;
-		
-	  remove(nodeToInsert);
-	  Node *temp;
-	  temp = node -> next;
+		// O(1) time | O(1) space
+		if (nodeToInsert == head && nodeToInsert == tail)
+			return;
 
-	  nodeToInsert -> next = node -> next;
-	  nodeToInsert -> prev = node;
+		remove(nodeToInsert);
+		Node *temp;
+		temp = node -> next;
 
-	  node -> next = nodeToInsert;
+		nodeToInsert -> next = node -> next;
+		nodeToInsert -> prev = node;
 
-	  if(node == tail)
-	  	tail = nodeToInsert; 
-	  else
-	  	temp -> prev = nodeToInsert;
+		node -> next = nodeToInsert;
+
+		if(node == tail)
+			tail = nodeToInsert; 
+		else
+			temp -> prev = nodeToInsert;
 	}
 
 	void insertAtPosition(int position, Node *nodeToInsert) {
@@ -153,8 +153,8 @@ public:
 	}
 
 	void removeNodesWithValue(int value) {
-	  
-	  // O(n) time | O(1) space
+	  	
+	  	// O(n) time | O(1) space
 		Node *current = head;
 		Node *temp;
 
@@ -173,7 +173,7 @@ public:
 
 	void remove(Node *node) {
 	  
-	  // O(1) time | O(1) space
+		// O(1) time | O(1) space
 		if (node == tail)
 			tail = node -> prev;
 
@@ -192,7 +192,7 @@ public:
 
 	bool containsNodeWithValue(int value) {
 	  
-	  // O(n) time | O(1) space
+	  	// O(n) time | O(1) space
 		Node *current = head;
 
 		while (current != nullptr)
@@ -203,7 +203,7 @@ public:
 			current = current -> next;
 		}
 		return false;
-		}
+	}
 };
 
 void printLinkedList(Node *node){

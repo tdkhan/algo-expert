@@ -50,8 +50,8 @@ int main() {
 
 	/*      A
 	      / | \
-         B  C  D
-        / \   / \  
+	     B  C  D
+	    / \   / \  
 	   E   F G   H
 	      / \ \
 	     I   J k

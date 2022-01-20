@@ -60,17 +60,17 @@ LinkedList *sumOfLinkedLists(LinkedList *linkedListOne, LinkedList *linkedListTw
 			prev = prev -> next;
 		}
 	}
-  return ans;
+	return ans;
 }
 
 void addMany(LinkedList *list, vector<int> values) {
 	LinkedList *current = list;
 	while (current->next != nullptr) {
-	  current = current->next;
+		current = current->next;
 	}
 	for (int value : values) {
-	  current->next = new LinkedList(value);
-	  current = current->next;
+		current->next = new LinkedList(value);
+		current = current->next;
 	}
 }
 

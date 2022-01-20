@@ -49,9 +49,9 @@ public:
 	}
 
   	Node *addChild(string name) {
-	    Node *child = new Node(name);
-	    children.push_back(child);
-	    return this;
+		Node *child = new Node(name);
+		children.push_back(child);
+		return this;
 	}
 };
 
@@ -59,8 +59,8 @@ int main() {
 
 	/*      A
 	      / | \
-         B  C  D
-        / \   / \  
+	     B  C  D
+	    / \   / \  
 	   E   F G   H
 	  / \   \
 	 I   J   k

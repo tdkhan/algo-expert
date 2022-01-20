@@ -29,11 +29,11 @@ LinkedList::LinkedList(int value) {
 void addMany(LinkedList *ll, vector<int> values) {
 	LinkedList *current = ll;
 	while (current->next != nullptr) {
-	  current = current->next;
+		current = current->next;
 	}
 	for (int value : values) {
-	  current->next = new LinkedList(value);
-	  current = current->next;
+		current->next = new LinkedList(value);
+		current = current->next;
 	}
 }
 
@@ -41,8 +41,8 @@ LinkedList *getNthNode(LinkedList *ll, int n) {
 	int counter = 1;
 	LinkedList *current = ll;
 	while (counter < n) {
-	  current = current->next;
-	  counter++;
+		current = current->next;
+		counter++;
 	}
 	return current;
 }
@@ -58,8 +58,8 @@ LinkedList *findLoop(LinkedList *head) {
 		second = second -> next -> next;
 	}
 	while (first != second);
-	
 	second = head;
+	
 	while (first != second){
 		first = first -> next;
 		second = second -> next;

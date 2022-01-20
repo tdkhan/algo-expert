@@ -43,11 +43,11 @@ LinkedList::LinkedList(int value) {
 void LinkedList::addMany(vector<int> values) {
 	LinkedList *current = this;
 	while (current->next != nullptr) {
-	  current = current->next;
+		current = current->next;
 	}
 	for (int value : values) {
-	  current->next = new LinkedList(value);
-	  current = current->next;
+		current->next = new LinkedList(value);
+		current = current->next;
 	}
 }
 
@@ -90,8 +90,8 @@ void removeKthNodeFromEnd(LinkedList *head, int k) {
 		count++;
 		if(count == b)
 		{
-				current -> next = current -> next -> next;
-				return;
+			current -> next = current -> next -> next;
+			return;
 		}
 		current = current -> next;
 	}

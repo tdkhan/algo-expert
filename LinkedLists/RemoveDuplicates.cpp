@@ -39,9 +39,7 @@ LinkedList *removeDuplicatesFromLinkedList(LinkedList *linkedList) {
 }
 
 void printLinkedList(LinkedList *list){
-
 	LinkedList *currentNode = list;
-
 	while (currentNode != nullptr){
 
 		cout << currentNode->value << " -> ";
