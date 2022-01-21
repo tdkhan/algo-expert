@@ -13,9 +13,12 @@ in a spiral pattern all the way until every element has been visited.
 
 using namespace std;
 
+//void traverse(vector<vector <int>> array, vector<int> &ans, int sc, int sr, int ec, int er);
+
 vector<int> spiralTraverse(vector<vector<int>> array) {
 
-  	// Solution 1: O() time | O() space 
+	
+  	// Solution 1: iterative - O(N) time | O(N) space 
 	if (array.empty() == true)
 		return {};
 	int cols = array[0].size()-1;
@@ -51,7 +54,40 @@ vector<int> spiralTraverse(vector<vector<int>> array) {
 		bottomLeft[1]+=1;
 	}
   	return ans;
+  	
+	/*
+  	// Solution 2: recursive - O(N) time | O(N) space
+  	vector<int> ans;
+	traverse(array, ans, 0, 0, array[0].size()-1, array.size()-1);
+  	return ans;
+	*/
 }
+
+/*
+void traverse(vector<vector <int>> array, vector<int> &ans, int sc, int sr, int ec, int er){
+	if (sc > ec || sr > er)
+		return;
+	for (int i = sc; i <= ec; i++)
+		ans.push_back(array[sr][i]);
+	for (int i = sr+1; i <= er; i++)
+		ans.push_back(array[i][ec]);
+	for (int i = ec-1; i >= sc; i--){
+		if (er == sr)
+		break;
+		ans.push_back(array[er][i]);
+	}
+	for (int i = er-1; i >= sr+1; i--){
+		if (sc == ec)
+		break;
+		ans.push_back(array[i][sc]);
+	}
+	sc += 1;
+	sr += 1;
+	ec -= 1;
+	er -= 1;
+	traverse(array, ans, sc, sr, ec, er);
+}
+*/
 
 int main() {
 
