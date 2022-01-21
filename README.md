@@ -27,6 +27,7 @@ g++ -o output <filename.cpp>
 | [Smallest Difference](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SmallestDifference.cpp)                          | 🔵         | Arrays               |
 | [Move Element To End](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MoveElementToEnd.cpp)                            | 🔵         | Arrays               |
 | [Monotonic Array](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MonotonicArray.cpp)                                  | 🔵         | Arrays               |
+| [Spiral Traverse](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SpiralTraverse.cpp)                                  | 🔵         | Arrays               |
 | [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
 | [Linked List Construction](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/LinkedListConstruction.cpp)            | 🔵         | Linked Lists         |
 | [Remove Kth Node From End](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveKthNodefromtheEnd.cpp)           | 🔵         | Linked Lists         |
