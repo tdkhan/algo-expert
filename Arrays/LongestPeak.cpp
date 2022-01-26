@@ -50,26 +50,26 @@ int longestPeak(vector<int> array) {
 	if(array.empty() == 1)
 	    return peak;
 	else{
-    	for (int i = 1; i < array.size() - 1; i++){
-    		if (array[i] > array[i+1] && array[i] > array[i-1]){
-    			count = 3;
-    			int rIdx = i+1;
-    			int lIdx = i-1;
-    			while((lIdx > 0 ) && (array[lIdx] > array[lIdx-1])){
-    				count++;
-    				lIdx--;
-    			}
-    			while((rIdx < (array.size()-1)) && (array[rIdx] > array[rIdx+1])){
-    				count++;
-    				i++;
-    				rIdx++;
-    			}
-    		}
-    		if (count > peak)
-    			peak = count;
-    		count = 0;
-    	}
-    }
+		for (int i = 1; i < array.size() - 1; i++){
+			if (array[i] > array[i+1] && array[i] > array[i-1]){
+				count = 3;
+				int rIdx = i+1;
+				int lIdx = i-1;
+				while((lIdx > 0 ) && (array[lIdx] > array[lIdx-1])){
+					count++;
+					lIdx--;
+				}
+				while((rIdx < (array.size()-1)) && (array[rIdx] > array[rIdx+1])){
+					count++;
+					i++;
+					rIdx++;
+				}
+			}
+			if (count > peak)
+				peak = count;
+			count = 0;
+		}
+	}
 	return peak;
 	*/
 }
