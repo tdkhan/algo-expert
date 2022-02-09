@@ -38,6 +38,7 @@ g++ -o output <filename.cpp>
 | [Sum of Linked Lists](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/SumofLinkedLists.cpp)                       | 🔵         | Linked Lists         |
 | [Find Loop](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/FindLoop.cpp)                                         | 🔴         | Linked Lists         |
 | [Branch Sums](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/BranchSums.cpp)                                     | 🟢         | Binary Trees         |
+| [Node Depths](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/NodeDepths.cpp)                                     | 🟢         | Binary Trees         |
 | [Palindrome Check](https://github.com/tdkhan/algo-expert/blob/main/Strings/PalindromeCheck.cpp)                               | 🟢         | Strings              |
 | [Depth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/DepthFirstSearch.cpp)                             | 🟢         | Graphs               |
 | [Single Cycle Check](https://github.com/tdkhan/algo-expert/blob/main/Graphs/SingleCycleCheck.cpp)                             | 🔵         | Graphs               |
