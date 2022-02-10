@@ -77,8 +77,7 @@ void invertBinaryTree(BinaryTree *tree) {
 	if (tree == nullptr)
 		return;
 	BinaryTree* temp = tree->left;
-	tree->left = tree->right;
-	tree->right = temp;
+	swap(tree->left, tree->right);
 	invertBinaryTree(tree->left);
 	invertBinaryTree(tree->right);
 	*/
@@ -107,7 +106,7 @@ int main() {
 	     / \  / \
 	   4   5 6   7
 	  / \  
-	 8  9  		 */
+	 8   9  	  */
 
 	BinaryTree root(1);
 	root.insert({2, 3, 4, 5, 6, 7, 8, 9});
