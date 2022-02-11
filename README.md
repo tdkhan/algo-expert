@@ -37,6 +37,7 @@ g++ -o output <filename.cpp>
 | [Remove Kth Node From End](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveKthNodefromtheEnd.cpp)           | 🔵         | Linked Lists         |
 | [Sum of Linked Lists](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/SumofLinkedLists.cpp)                       | 🔵         | Linked Lists         |
 | [Find Loop](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/FindLoop.cpp)                                         | 🔴         | Linked Lists         |
+| [Reverse Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/ReverseLinkedList.cpp)                      | 🔴         | Linked Lists         |
 | [Branch Sums](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/BranchSums.cpp)                                     | 🟢         | Binary Trees         |
 | [Node Depths](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/NodeDepths.cpp)                                     | 🟢         | Binary Trees         |
 | [Invert Binary Tree](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/InvertBinaryTree.cpp)                        | 🔵         | Binary Trees         |
