@@ -39,9 +39,32 @@ void addMany(LinkedList *ll, vector<int> values) {
 	}
 }
 
+void recursiveMerge(LinkedList *currentOne, LinkedList *currentTwo, LinkedList *prevOne) {
+	if (currentOne == nullptr || currentTwo == nullptr){
+		if (currentOne == nullptr)
+			prevOne->next = currentTwo;
+		return;
+	}
+	
+	if (currentOne->value < currentTwo->value){
+		prevOne = currentOne;
+  		currentOne = currentOne->next;
+	}
+  	else{
+		if (prevOne != nullptr)
+			prevOne->next = currentTwo;
+		
+		prevOne = currentTwo;
+		currentTwo = currentTwo->next;
+		prevOne->next = currentOne;
+	}
+	recursiveMerge(currentOne, currentTwo, prevOne);
+}
+
 LinkedList *mergeLinkedLists(LinkedList *headOne, LinkedList *headTwo) {
 
-  	// Solution 1: O(n+m) time | O(1) space
+	
+  	// Solution 1: iterative - O(n+m) time | O(1) space
 	LinkedList *main, *second, *temp;
 	if (headOne->value <= headTwo->value){
 		main = headOne;
@@ -62,7 +85,13 @@ LinkedList *mergeLinkedLists(LinkedList *headOne, LinkedList *headTwo) {
 		}
 	}
 	main->next = second;
-  	return headOne->value <= headTwo->value ? headOne : headTwo;;
+  	return headOne->value <= headTwo->value ? headOne : headTwo;
+  	
+	/*
+  	// Solution 2: recursive - O(n+m) time | O(n+m) space
+  	recursiveMerge(headOne, headTwo, nullptr);
+	return headOne->value < headTwo->value ? headOne : headTwo;
+  	*/
 }
 
 void printLinkedList(LinkedList *head) {
