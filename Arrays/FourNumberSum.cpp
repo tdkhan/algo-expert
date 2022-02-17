@@ -11,6 +11,7 @@ If no four number sum up to the target sum, the function should return an empty 
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 
 using namespace std;
 
@@ -31,9 +32,9 @@ vector<vector<int>> fourNumberSum(vector<int> array, int targetSum) {
 		}
 	}
 	return ans;
-	*/
+	
 
-	// Solution 2: O(n^4) time | o(n) space
+	// Solution 2: O(n^3) time | o(n) space
 	int size = array.size();
 	int start, end;
 	sort(array.begin(), array.end());
@@ -56,7 +57,33 @@ vector<vector<int>> fourNumberSum(vector<int> array, int targetSum) {
 		}
 	}
   	return ans;
-  	
+	*/
+
+  	// Solution 3: O(n^2) time | O(n^2) space
+  	unordered_map<int, vector<vector<int>>> list;
+	int currentSum, diff;
+	vector<vector<int>> ans;
+	vector<vector<int>> quad;
+	for (int i = 1; i < array.size()-1; i++){
+		for (int j = i+1; j < array.size(); j++){
+			currentSum = array[i] + array[j];
+			diff = targetSum - currentSum;
+			if (list.find(diff) != list.end()){
+				for (int m = 0; m < list.at(diff).size(); m++)
+					ans.push_back({list.at(diff)[m][0], list.at(diff)[m][1], array[i], array[j]});
+			}
+		}
+		for (int k = 0; k < i; k++){
+			currentSum = array[i] + array[k];
+			quad = {{array[i], array[k]}};
+			if (list.find(currentSum) == list.end())
+				list.insert({currentSum, quad});
+			else
+				list.at(currentSum).push_back({array[i], array[k]});
+		}
+	}
+  	return ans;
+
 }
 
 void printVector(vector<vector<int>> array) {
