@@ -32,6 +32,7 @@ g++ -o output <filename.cpp>
 | [Array of Products](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ArrayofProducts.cpp)                               | 🔵         | Arrays               |
 | [First Duplicate Value](https://github.com/tdkhan/algo-expert/blob/main/Arrays/FirstDuplicateValue.cpp)                       | 🔵         | Arrays               |
 | [Merge Overlapping Intervals](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MergeOverlappingIntervals.cpp)           | 🔵         | Arrays               |
+| [Four Number Sum](https://github.com/tdkhan/algo-expert/blob/main/Arrays/FourNumberSum.cpp)                                   | 🔵         | Arrays               |
 | [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
 | [Linked List Construction](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/LinkedListConstruction.cpp)            | 🔵         | Linked Lists         |
 | [Remove Kth Node From End](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveKthNodefromtheEnd.cpp)           | 🔵         | Linked Lists         |
