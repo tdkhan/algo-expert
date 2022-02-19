@@ -44,6 +44,7 @@ g++ -o output <filename.cpp>
 | [Node Depths](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/NodeDepths.cpp)                                     | 🟢         | Binary Trees         |
 | [Invert Binary Tree](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/InvertBinaryTree.cpp)                        | 🔵         | Binary Trees         |
 | [Palindrome Check](https://github.com/tdkhan/algo-expert/blob/main/Strings/PalindromeCheck.cpp)                               | 🟢         | Strings              |
+| [Nth Fibonacci](https://github.com/tdkhan/algo-expert/blob/main/Recursion/NthFibonacci.cpp)                                   | 🟢         | Recursion            |
 | [Depth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/DepthFirstSearch.cpp)                             | 🟢         | Graphs               |
 | [Single Cycle Check](https://github.com/tdkhan/algo-expert/blob/main/Graphs/SingleCycleCheck.cpp)                             | 🔵         | Graphs               |
 | [Breadth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/BreadthFirstSearch.cpp)                         | 🔵         | Graphs               |
