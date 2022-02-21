@@ -74,7 +74,7 @@ LinkedList *shiftLinkedList(LinkedList *head, int k) {
 		head = two->next;
 		two->next = nullptr;
 	}
-  return head;
+	return head;
 }
 
 int main() {
