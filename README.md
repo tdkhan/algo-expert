@@ -40,6 +40,7 @@ g++ -o output <filename.cpp>
 | [Find Loop](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/FindLoop.cpp)                                         | 🔴         | Linked Lists         |
 | [Reverse Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/ReverseLinkedList.cpp)                      | 🔴         | Linked Lists         |
 | [Merged Linked Lists](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/MergedLinkedLists.cpp)                      | 🔴         | Linked Lists         |
+| [Shift Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/ShiftLinkedList.cpp)                          | 🔴         | Linked Lists         |
 | [Branch Sums](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/BranchSums.cpp)                                     | 🟢         | Binary Trees         |
 | [Node Depths](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/NodeDepths.cpp)                                     | 🟢         | Binary Trees         |
 | [Invert Binary Tree](https://github.com/tdkhan/algo-expert/blob/main/BinaryTrees/InvertBinaryTree.cpp)                        | 🔵         | Binary Trees         |
