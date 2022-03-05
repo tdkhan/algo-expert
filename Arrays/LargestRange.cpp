@@ -18,11 +18,12 @@ You can assume that there will only be one largest range.
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <unordered_map>
 
 using namespace std;
 
 vector<int> largestRange(vector<int> array) {
-  	
+  	/*
   	// Solution 1: Brute Force Approach: O(nlog(n)) time | O(1) space
 	if (array.size() == 1)
 		return {array[0], array[0]};
@@ -45,6 +46,39 @@ vector<int> largestRange(vector<int> array) {
 		}
 	}
 	return ans;
+	*/
+
+	// Solution 2: O(n) time | O(n) space
+	unordered_map<int, bool> map;
+	for (int i = 0; i < array.size(); i++){
+		if (map.find(array[i]) == map.end())
+			map[array[i]] = false;
+	}
+	int count = 0; 
+	int k, l;
+	int start, end;
+	for(int i = 0; i < array.size(); i++){
+		if (map[array[i]] == false){
+			map[array[i]] = true;
+			k = 1;
+			while (map.find(array[i]-k)!=map.end()){
+				map[array[i]-k] = true;
+				k++;
+			}
+			l = 1;
+			while (map.find(array[i]+l)!=map.end()){
+				map[array[i]+l] = true;
+				l++;
+			}
+			if (l+k-2 >= count){
+				count = l+k-2;
+				start = array[i]-k+1;
+				end = array[i]+l-1;
+			}
+		}
+	}
+  	return {start, end};
+
 }
 
 int main() {
