@@ -11,11 +11,12 @@ the letter a.
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-string caesarCypherEncryptor(string str, int key) {
-  	
+string caesarCipherEncryptor(string str, int key) {
+  	/*
   	// Solution 1: O(n) time | O(1) space
 	for (int i = 0; i < str.size(); i++){
 		int aschii = (int)str[i] + key%26;
@@ -23,6 +24,17 @@ string caesarCypherEncryptor(string str, int key) {
 		str[i] = (char)aschii;
 	}
   	return str;
+  	*/
+
+  	// Solution 2: O(n) time | O(1) space
+	string alphabets = "abcdefghijklmnopqrstuvwxyz";
+	for (int i = 0; i < str.size(); i++){
+		key = key%26;
+		int index = (alphabets.find(str[i]) + key)%26;
+		str[i] = alphabets[index];
+	}
+  	return str;
+
 }
 
 int main() {
@@ -32,7 +44,7 @@ int main() {
 	string ans;
 
 	// expected output: zab
-	ans = caesarCypherEncryptor(str, key);
+	ans = caesarCipherEncryptor(str, key);
 	cout << ans << endl;
 	return 0;
 }
