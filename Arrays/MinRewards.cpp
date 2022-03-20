@@ -23,7 +23,7 @@ You can assume that all students have different scores; in other words, the scor
 using namespace std;
 
 int minRewards(vector<int> scores) {
-
+	/*
   	// Solution 1: O(n) time | O(n) space
 	if (scores.size() == 1)
 		return 1;
@@ -44,22 +44,35 @@ int minRewards(vector<int> scores) {
 		int reward = 2;
 		int i = x;
 		while (scores[x] < scores[x+1] && x+1 < scores.size()){
-			if (rewards[x+1] < reward)
-				rewards[x+1] = reward;
+			rewards[x+1] = max(rewards[x+1], reward);
 			reward++;
 			x++;
 		}
 		reward = 2;
 		x = i;
 		while (scores[x] < scores[x-1] && x-1 >= 0){
-			if (rewards[x-1] < reward)
-				rewards[x-1] = reward;
+			rewards[x-1] = max(rewards[x-1], reward);
 			reward++;
 			x--;
 		}
 	}
 	int sum = accumulate(rewards.begin(), rewards.end(), 0);
   	return sum;
+	*/
+
+  	// Solution 2: O(n) time | O(n) space
+	vector<int> rewards(scores.size(), 1);
+	for (int i = 1; i < scores.size(); i++){
+		if (scores[i] > scores[i-1])
+			rewards[i] = rewards[i-1]+1;
+	}
+	for (int i = scores.size()-2; i >= 0; i--){
+		if (scores[i] > scores[i+1])
+			rewards[i] = max(rewards[i], rewards[i+1]+1);
+	}
+	int sum = accumulate(rewards.begin(), rewards.end(), 0);
+  	return sum;
+  	
 }
 
 int main() {
