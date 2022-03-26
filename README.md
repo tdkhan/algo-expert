@@ -36,6 +36,7 @@ g++ -o output <filename.cpp>
 | [Subarray Sort](https://github.com/tdkhan/algo-expert/blob/main/Arrays/SubarraySort.cpp)                                      | 🔴         | Arrays               |
 | [Largest Range](https://github.com/tdkhan/algo-expert/blob/main/Arrays/LargestRange.cpp)                                      | 🔴         | Arrays               |
 | [Min Rewards](https://github.com/tdkhan/algo-expert/blob/main/Arrays/MinRewards.cpp)                                          | 🔴         | Arrays               |
+| [Zigzag Traverse](https://github.com/tdkhan/algo-expert/blob/main/Arrays/ZigzagTraverse.cpp)                                  | 🔴         | Arrays               |
 | [Remove Duplicates from Linked List](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveDuplicates.cpp)        | 🟢         | Linked Lists         |
 | [Linked List Construction](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/LinkedListConstruction.cpp)            | 🔵         | Linked Lists         |
 | [Remove Kth Node From End](https://github.com/tdkhan/algo-expert/blob/main/LinkedLists/RemoveKthNodefromtheEnd.cpp)           | 🔵         | Linked Lists         |
