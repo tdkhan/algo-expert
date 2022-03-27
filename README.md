@@ -55,4 +55,5 @@ g++ -o output <filename.cpp>
 | [Single Cycle Check](https://github.com/tdkhan/algo-expert/blob/main/Graphs/SingleCycleCheck.cpp)                             | 🔵         | Graphs               |
 | [Breadth First Search](https://github.com/tdkhan/algo-expert/blob/main/Graphs/BreadthFirstSearch.cpp)                         | 🔵         | Graphs               |
 | [River Sizes](https://github.com/tdkhan/algo-expert/blob/main/Graphs/RiverSizes.cpp)                                          | 🔵         | Graphs               |
+| [Bubble Sort](https://github.com/tdkhan/algo-expert/blob/main/Graphs/BubbleSort.cpp)                                          | 🟢         | Sorting              |
 | [Kadane's Algorithm](https://github.com/tdkhan/algo-expert/blob/main/FamousAlgorithms/KadanesAlgorithm.cpp)                   | 🔵         | Famous Algorithms    |
