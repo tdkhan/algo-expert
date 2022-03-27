@@ -39,4 +39,5 @@ int main() {
 	for (auto x : ans)
 		cout << x << ", ";
 	cout << "\b\b]" << endl;
+	return 0;
 }
